@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+  padding: opx;
+}
+.borde {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.logo-hola-mundo {
+  width: 180px;
+}
+
+@media (max-width: 767px) {
+  .logo-hola-mundo {
+    width: 100px;
+  }
+  .logo {
+    width: 130px;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.navbar .toggler {
+  margin-left: auto;
+}
