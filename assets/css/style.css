@@ -3,6 +3,12 @@
   padding: opx;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 main {
   width: 100vw;
   background-image: url(../imgs/fondo-formal.jpg);
@@ -10,8 +16,10 @@ main {
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin-top: -130px;
-  padding-top: 150px;
+  margin-top: 0px;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  min-height: 600px;
 }
 
 .borde {
@@ -121,13 +129,44 @@ main {
   margin-top: 150px;
 }
 
-.apt-act {
+section {
   background-color: #211025;
   color: rgb(171, 177, 182);
   font-size: 1.5rem;
   font-weight: 400;
+  min-height: 50vh;
 }
 
 .cuadro-info {
   margin-top: 130px;
+}
+
+.experiencia {
+  width: 100vw;
+  background-image: url(../imgs/fondo-morado.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: -80px;
+  padding-top: 290px;
+}
+.divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #333, transparent);
+  margin: 20px 0;
+}
+
+.col-md-6 {
+  position: relative;
+}
+
+#experiencia-laboral .col-md-6::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #333, transparent);
+  position: absolute;
+  bottom: 0;
 }
