@@ -1,6 +1,6 @@
 * {
   margin: 0px;
-  padding: opx;
+  padding: 0px;
 }
 
 *,
@@ -10,16 +10,19 @@
 }
 
 main {
-  width: 100vw;
   background-image: url(../imgs/fondo-formal.jpg);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: 0px;
-  padding-top: 100px;
-  padding-bottom: 60px;
-  min-height: 600px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 50vh;
+}
+
+.name {
+  font-size: 30px;
 }
 
 .borde {
@@ -32,7 +35,7 @@ main {
 }
 
 .logo-hola-mundo {
-  width: 220px;
+  width: 140px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -47,7 +50,7 @@ main {
     width: 150px;
   }
   .foto-diego {
-    width: 300px;
+    width: 250px;
   }
 }
 
@@ -105,7 +108,7 @@ main {
 
 .navbar .nav-link {
   color: aliceblue;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .navbar .nav-link:hover {
@@ -116,29 +119,29 @@ main {
 .foto-diego {
   box-shadow: 0 4px 8px 0;
   border-radius: 50%;
+  width: 240px;
 }
 
 .info {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
 .sobre-mi {
-  font-size: 1.5rem;
   font-weight: 500;
-  margin-top: 150px;
+  margin-top: 90px;
 }
 
 section {
   background-color: #211025;
   color: rgb(171, 177, 182);
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   min-height: 50vh;
 }
 
 .cuadro-info {
-  margin-top: 130px;
+  margin-top: 40px;
 }
 
 .experiencia {
@@ -169,4 +172,35 @@ section {
   background: linear-gradient(to right, transparent, #333, transparent);
   position: absolute;
   bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .logo-hola-mundo,
+  .logo {
+    width: 100px;
+  }
+  .foto-diego {
+    width: 200px;
+  }
+  .nav-link {
+    padding: 0.5rem;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-collapse {
+    width: 100%;
+    background-color: rgba(56, 7, 66, 0.842);
+  }
+  .navbar-toggler {
+    margin-left: auto;
+  }
+}
+
+.comp-tec {
+  margin-top: 35px;
+}
+
+.foto-portafolio {
+  width: 800px;
 }
