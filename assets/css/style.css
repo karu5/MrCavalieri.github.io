@@ -3,12 +3,6 @@
   padding: 0px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 main {
   background-image: url(../imgs/fondo-formal.jpg);
   background-size: cover;
@@ -31,7 +25,6 @@ main {
   border: 3px solid #5c085c85;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.623);
-  margin-bottom: 20px;
 }
 
 .logo-hola-mundo {
@@ -43,35 +36,48 @@ main {
 }
 
 @media (max-width: 767px) {
-  .logo-hola-mundo {
-    width: 130px;
-  }
+  .logo-hola-mundo,
   .logo {
-    width: 150px;
+    width: 100px;
   }
   .foto-diego {
-    width: 250px;
+    width: 200px;
+  }
+  .nav-link {
+    padding: 0.5rem;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-collapse {
+    width: 100%;
+    background-color: rgba(56, 7, 66, 0.842);
+  }
+  .navbar-toggler {
+    margin-left: auto;
   }
 }
 
 @media (max-width: 991px) {
   .navbar-collapse {
     width: 100vw;
-    margin-top: 1rem;
   }
 
   .navbar-collapse.collapsing {
-    height: auto;
     transition: transform 0s ease;
+    transform: translateY(-100%);
   }
 
   .navbar-collapse.show {
-    display: block;
+    transition: transform 0.3s ease;
 
     position: absolute;
     background-color: rgba(56, 7, 66, 0.842);
     top: 100%;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  .foto-portafolio {
+    width: 70%;
   }
 }
 
@@ -87,23 +93,15 @@ main {
 }
 
 .navbar .toggler {
-  margin-left: auto;
+  margin-left: 0px;
 }
 
 .navbar-toggler {
   color: #92a352;
 }
-.navbar-toggler span,
-.navbar-toggler span::before,
-.navbar-toggler span::after {
-  background-color: #809e118f;
-}
 
-.navbar-toggler:hover {
-  transform: scale(1.1);
-  background-color: #a000eb;
-  color: #ffffff;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+.navbar-toggler span {
+  background-color: #809e118f;
 }
 
 .navbar .nav-link {
@@ -112,7 +110,7 @@ main {
 }
 
 .navbar .nav-link:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   transition: transform 0.3s ease;
 }
 
@@ -129,7 +127,7 @@ main {
 
 .sobre-mi {
   font-weight: 500;
-  margin-top: 90px;
+  margin-top: 40px;
 }
 
 section {
@@ -174,33 +172,15 @@ section {
   bottom: 0;
 }
 
-@media (max-width: 767px) {
-  .logo-hola-mundo,
-  .logo {
-    width: 100px;
-  }
-  .foto-diego {
-    width: 200px;
-  }
-  .nav-link {
-    padding: 0.5rem;
-  }
-  .navbar {
-    flex-direction: column;
-  }
-  .navbar-collapse {
-    width: 100%;
-    background-color: rgba(56, 7, 66, 0.842);
-  }
-  .navbar-toggler {
-    margin-left: auto;
-  }
-}
-
-.comp-tec {
-  margin-top: 35px;
-}
-
 .foto-portafolio {
-  width: 800px;
+  width: 70%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.foto-portafolio:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
